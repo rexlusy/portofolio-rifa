@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d7edff">
+  <meta name="description" content="Draf portofolio pixel art dengan teks lorem ipsum.">
+  <title>Lorem Ipsum — Portofolio</title>
+  <link rel="icon" href="assets/spark.png" type="image/png">
+  <link rel="preload" href="assets/bitcount.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body id="atas">
+  <a class="skip" href="#konten">Lewati ke konten</a>
+  <div class="sky" aria-hidden="true">
+    <i class="cloud cloud-west"></i>
+    <i class="cloud cloud-east"></i>
+    <i class="cloud cloud-low"></i>
+  </div>
+
+  <header class="site-header wrap">
+    <a class="brand" href="#atas">
+      <img src="assets/spark.png" width="24" height="20" alt="">
+      <span>Portofolio</span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="konten" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-scene" src="assets/pixel-city.webp" width="1672" height="941" alt="" fetchpriority="high">
+      <img class="hero-hearts" src="assets/hearts.png" width="80" height="22" alt="">
+      <div class="hero-sparks" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>LOREM</span> <span>IPSUM</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a class="pixel-button" href="#tentang"><span>START</span><i class="start-arrow" aria-hidden="true"></i></a>
+      </div>
+      <figure class="character character-left" aria-hidden="true">
+        <span class="speech"><img src="assets/spark.png" width="24" height="20" alt=""></span>
+        <img class="sprite" src="assets/sprite-lilac.png" width="66" height="78" alt="">
+      </figure>
+      <figure class="character character-right" aria-hidden="true">
+        <span class="speech"><span class="speech-heart"></span></span>
+        <img class="sprite" src="assets/sprite-blue.png" width="66" height="78" alt="">
+      </figure>
+    </section>
+
+    <section class="panel welcome" id="tentang" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <h2 id="welcome-title">WELCOME</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
+      </div>
+      <div class="window welcome-window">
+        <div class="window-bar"><span>Lorem ipsum</span><span class="window-dots" aria-hidden="true">▪▪▪</span></div>
+        <div class="welcome-window-content">
+          <div class="avatar-frame"><img src="assets/sprite-blue.png" width="66" height="78" alt=""></div>
+          <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+      </div>
+      <img class="panel-hearts" src="assets/hearts.png" width="56" height="16" alt="">
+    </section>
+
+    <section class="panel projects" id="proyek" aria-labelledby="projects-title">
+      <header class="panel-heading">
+        <h2 id="projects-title">PROJECTS</h2>
+        <img src="assets/hearts.png" width="56" height="16" alt="">
+      </header>
+      <div class="project-grid">
+        <article class="window project-card">
+          <div class="window-bar" aria-hidden="true"><span class="window-dots">▪▪▪</span></div>
+          <img class="project-art" src="assets/scene-sunset.png" width="168" height="100" alt="" loading="lazy">
+          <div class="project-copy">
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="detail-button" type="button" aria-haspopup="dialog" aria-controls="project-detail" aria-label="Lihat detail Lorem ipsum">Lihat detail <i aria-hidden="true"></i></button>
+          </div>
+        </article>
+        <article class="window project-card">
+          <div class="window-bar" aria-hidden="true"><span class="window-dots">▪▪▪</span></div>
+          <img class="project-art" src="assets/scene-console.png" width="168" height="100" alt="" loading="lazy">
+          <div class="project-copy">
+            <h3>Dolor sit amet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="detail-button" type="button" aria-haspopup="dialog" aria-controls="project-detail" aria-label="Lihat detail Dolor sit amet">Lihat detail <i aria-hidden="true"></i></button>
+          </div>
+        </article>
+        <article class="window project-card">
+          <div class="window-bar" aria-hidden="true"><span class="window-dots">▪▪▪</span></div>
+          <img class="project-art" src="assets/scene-trophy.png" width="168" height="100" alt="" loading="lazy">
+          <div class="project-copy">
+            <h3>Consectetur elit</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="detail-button" type="button" aria-haspopup="dialog" aria-controls="project-detail" aria-label="Lihat detail Consectetur elit">Lihat detail <i aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel contact" id="kontak" aria-labelledby="contact-title">
+      <img src="assets/spark.png" width="48" height="40" alt="">
+      <div>
+        <h2 id="contact-title">CONTACT</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <a class="detail-button" href="#atas">Kembali ke atas <i class="up-arrow" aria-hidden="true"></i></a>
+    </section>
+  </main>
+
+  <dialog class="window detail-window" id="project-detail" aria-labelledby="detail-title">
+    <div class="window-bar">
+      <span>Lorem ipsum</span>
+      <form method="dialog">
+        <button class="close-button" autofocus aria-label="Tutup detail">×</button>
+      </form>
+    </div>
+    <div class="detail-content">
+      <h2 id="detail-title">Lorem ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat dignissim lorem, non volutpat risus ornare quis. Maecenas in ligula vel velit facilisis auctor.</p>
+    </div>
+  </dialog>
+</body>
+</html>
