@@ -13,6 +13,18 @@
   <script src="public/motion.js" defer></script>
   <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // Vite serves public/assets at /assets; static previews use public/assets.
+  const cvLink = document.querySelector('a[href="public/assets/cv-muhammad-rifa-aqilla.pdf"]');
+  if (cvLink) {
+    fetch("assets/cv-muhammad-rifa-aqilla.pdf", { method: "HEAD" })
+      .then(response => {
+        const type = response.headers.get("content-type") || "";
+        if (response.ok && type.toLowerCase().includes("application/pdf")) {
+          cvLink.href = "assets/cv-muhammad-rifa-aqilla.pdf";
+        }
+      })
+      .catch(() => {});
+  }
 const emailForm = document.getElementById('email-form');
 
 emailForm.addEventListener('submit', (event) => {
