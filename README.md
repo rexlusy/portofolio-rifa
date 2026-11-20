@@ -1,15 +1,42 @@
-# Portofolio Pixel Art
+# Muhammad Rifa Aqilla — Portofolio
 
-Draf satu halaman dengan sampul bergaya gim, bagian profil, galeri proyek, dan kontak. Teks sementara memakai lorem ipsum.
+Portofolio satu halaman dengan tema pixel art, animasi masuk saat scroll, galeri proyek, pengalaman, sertifikat, dan karakter personal. Animasi mengikuti pengaturan reduced motion pada perangkat.
 
-## Preview lokal
+[Situs utama](https://portofolio-rifa-aqilla.cheekyhome5.chatgpt.site/)
 
-Buka `index.html` di browser atau jalankan `python -m http.server 8000` dari root, lalu buka http://localhost:8000.
+## Pratinjau statis dan GitHub Pages
 
-## Pengeditan
+Jalankan dari root repositori.
 
-Ubah teks dan struktur di `index.html`. Warna, tipografi, dan layout ada di `styles.css`. Gambar serta font lokal ada di `assets/`.
+```sh
+python -m http.server 8000
+```
 
-## GitHub Pages
+Buka http://localhost:8000. File `index.html` adalah salinan statis yang memakai aset relatif di `public/`. Di GitHub Pages, pilih branch `main` dengan folder `/(root)`.
 
-Di pengaturan **Pages**, pilih **Deploy from a branch**, branch **main**, dan folder **/(root)**.
+Form pesan membuka draf di aplikasi email. Tombol buku tamu pada versi statis menuju situs utama. Komentar bersama disimpan oleh backend Cloudflare D1 pada situs utama.
+
+## Menjalankan versi dengan backend
+
+Gunakan Node.js 22.13 atau lebih baru.
+
+```sh
+npm ci
+npm run build
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_mushy_lilith.sql
+npm run dev
+```
+
+Buka alamat lokal yang ditampilkan terminal. Jalankan perintah migrasi sekali pada database lokal baru.
+
+## Mengganti isi dan aset
+
+- `app/portfolio.html` memuat halaman yang disajikan oleh backend.
+- `public/styles.css` mengatur warna, tipografi, ukuran, dan transisi.
+- `public/motion.js` mengatur animasi masuk tiap bagian.
+- `public/portfolio.js` mengatur menu, tab, galeri, dan dialog.
+- `public/contact.js` menangani draf email dan buku tamu pada versi backend.
+- `public/assets/` menyimpan foto, karakter, gambar proyek, font, CV, dan sertifikat.
+- `app/api/comments/route.ts`, `db/`, dan `drizzle/` memuat backend buku tamu.
+
+Setelah menyunting isi halaman, sesuaikan juga `index.html` untuk pratinjau statis. Versi statis memakai awalan `public/` pada URL aset dan menautkan buku tamu ke situs utama.
