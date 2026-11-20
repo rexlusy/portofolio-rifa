@@ -910,6 +910,31 @@ main:focus {
   border-bottom: 2px solid var(--ink);
 }
 
+.project-screenshot {
+  object-fit: contain;
+  image-rendering: auto;
+  background: var(--paper);
+}
+
+.project-detail-visual {
+  display: block;
+  margin: 14px 0 18px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.project-detail-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 55svh;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.project-servis-visual {
+  background: #087bfa;
+}
+
 .project-copy {
   display: grid;
   justify-items: start;
